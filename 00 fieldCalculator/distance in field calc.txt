@@ -1,0 +1,2 @@
+!Shape!.positionAlongLine(5187,False).centroid.X
+!Shape!.positionAlongLine(5187,False).centroid.Y

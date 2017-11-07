@@ -1,0 +1,127 @@
+	STRIP THE LAST CARACTERS :
+//python
+!Text_1![:-4]
+
+
+// VBA
+//get the last 4 elements from the right
+Right( [Text_1], 4)
+
+
+//python
+!FieldName!.replace("Old Value", "New Value")
+
+//YEAR :
+
+def
+
+
+
+
+//FIELD Max_bedrijfsdruk
+//find and replace SCR for Max_bedrijfsdruk
+//pn 16
+//pn 10
+
+def findAndReplace(field):
+	if field.find("pn10") <> -1: 
+		return "10"
+	elif field.find("pn16") <> -1: 
+		return "16"
+	else:
+		return "Onbekend"
+
+findAndReplace(field)
+
+----------------------------------
+
+//FIELD Opmerking
+//find and replace SCR for Opmerking
+
+def findAndReplace(field):
+	if field.find("k9") <> -1: 
+		return "k9"
+	elif field.find("wd12") <> -1: 
+		return "wd12"
+	else:
+		return "Onbekend"
+
+findAndReplace(field)
+
+---------------------------------------
+
+//FIELD Material
+AC
+NGIJ
+PVC BVB
+Gr GIJ
+HDPE
+PVC
+ST
+PE
+
+//testing replace materials
+
+def materialFind(field):
+	fields = ["AC", "NGIJ", "PVC BVB", "Gr GIJ"]
+	for f in fields:
+		if field.find(f) <> -1:
+			return f
+			
+			
+materialFind(!Text_1!)
+
+
+//find and replace SCR for Materials
+def findAndReplace(field):
+	if field.find("AC") <> -1: 
+		return "AC"
+	elif field.find("NGIJ") <> -1: 
+		return "NGIJ"
+	elif field.find("PVC BVB") <> -1: 
+		return "PVC BVB"
+	elif field.find("Gr GIJ") <> -1: 
+		return "Gr GIJ"
+	elif field.find("HDPE") <> -1: 
+		return "HDPE"
+	elif field.find("PVC") <> -1: 
+		return "PVC"
+	elif field.find("ST") <> -1: 
+		return "ST"
+	elif field.find("PE") <> -1: 
+		return "PE"
+	else:
+		return None
+
+----------------------------------------------
+//FILED YEA
+
+def findForYear(field):	
+	if field is None:
+		return "1800"
+		
+findForYear(myField)
+
+
+
+//REPLACE YEAR
+!Jaar_van_aanleg!.replace("xxxx", "1800")
+		
+		
+		
+--------------------------------------
+
+
+
+	
+	
+-------------------------------------
+def externe(field):
+    field.find("wd12") <> -1:
+        return "112"
+	
+
+
+
+
+

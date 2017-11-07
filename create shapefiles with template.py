@@ -1,0 +1,11 @@
+import arcpy
+
+# Local variables:
+Output = "C:\\Arcadis\\LunguC\\Projects\\New folder\\ProRail - Knipstukken Zevenaar Didam\\Output\\shapes"
+TEMPLATE_shp = "C:\\Arcadis\\LunguC\\Projects\\New folder\\ProRail - Knipstukken Zevenaar Didam\\Output\\!TEMPLATE\\TEMPLATE.shp"
+TEST_shp = TEMPLATE_shp
+
+lista=["0003W_Vitens","0009W_Vitens","0010W_Vitens","0011R_VR_Gemeente_Montferland","0016R_PR_Gemeente_Montferland","0012R_PR_Waterschap_Rijn_en_IJssel","0013R_PR_Gemeente_Zevenaar","0014R_PR_Gemeente_Zevenaar","0023G_LD_Liander","0025G_LD_Liander","0026G_HD_Liander","0027G_HD_Liander","0028G_HD_Liander","0039E_MS_Liander","0033E_MS_Liander","0034E_MS_Liander","0035E_MS_Liander","0038E_MS_Liander","0040E_MS_Liander","0041E_MS_Liander","0042E_MS_Liander","0043E_MS_Liander","0044E_MS_Liander","0045E_MS_Liander","0047E_MS_Liander","0048E_MS_Liander","0049E_MS_Liander","0051E_MS_Liander","0055E_LS_Provincie_Gelderland","0057E_LS_Liander","0058E_LS_Liander","0059E_LS_Liander","0060E_LS_Liander","0064E_LS_Liander","0159E_LS_Liander","0160E_LS_Liander","0161E_LS_Liander","0163E_LS_Liander","0065E_LS_Liander","0066E_LS_Liander","0068E_LS_Liander","0073E_LS_Gemeente_Zevenaar","0084T_Ziggo","0086T_Ziggo","0149T_Ziggo","0158T_Ziggo","0087T_Ziggo","0088T_Ziggo","0091T_Ziggo","0095T_Ziggo","0096T_Ziggo","0112T_KPN","0105T_KPN","0106T_KPN","0107T_KPN","0108T_KPN","0109T_KPN","0110T_KPN","0111T_KPN","0113T_KPN","0124T_KPN","0125T_KPN","0126T_KPN","0127T_KPN","0130T_KPN","0144T_KPN","0138T_Liander","0139T_Liander"]
+for i in lista:
+    arcpy.CreateFeatureclass_management(Output, i, "POLYLINE", "'C:\\Arcadis\\LunguC\\Projects\\New folder\\ProRail - Knipstukken Zevenaar Didam\\Output\\!TEMPLATE\\TEMPLATE.shp'", "DISABLED", "DISABLED", "PROJCS['RD_New',GEOGCS['GCS_Amersfoort',DATUM['D_Amersfoort',SPHEROID['Bessel_1841',6377397.155,299.1528128]],PRIMEM['Greenwich',0.0],UNIT['Degree',0.0174532925199433]],PROJECTION['Double_Stereographic'],PARAMETER['False_Easting',155000.0],PARAMETER['False_Northing',463000.0],PARAMETER['Central_Meridian',5.38763888888889],PARAMETER['Scale_Factor',0.9999079],PARAMETER['Latitude_Of_Origin',52.15616055555555],UNIT['Meter',1.0]];-30515500 -30279500 10000;-100000 10000;-100000 10000;0.001;0.001;0.001;IsHighPrecision", "", "0", "0", "0")
+    print("{} created".format(i))
